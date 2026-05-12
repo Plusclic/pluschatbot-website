@@ -100,18 +100,44 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── Contact form ─────────────────────────────── */
   const form = document.getElementById('contact-form');
   if (form) {
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', async e => {
       e.preventDefault();
       const submitBtn = form.querySelector('[type="submit"]');
-      submitBtn.textContent = '✓ ¡Mensaje enviado!';
+      submitBtn.textContent = 'Enviando...';
       submitBtn.disabled    = true;
-      submitBtn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
-      setTimeout(() => {
-        submitBtn.textContent  = 'Enviar mensaje';
-        submitBtn.disabled     = false;
-        submitBtn.style.background = '';
+
+      const data = {
+        nombre:   form.nombre.value,
+        empresa:  form.empresa.value,
+        email:    form.email.value,
+        telefono: form.telefono.value,
+        motivo:   form.motivo.value,
+        mensaje:  form.mensaje.value,
+      };
+
+      try {
+        await fetch('https://n8n.srv1164464.hstgr.cloud/webhook/3d06afe9-d994-486b-8609-5cc6bc2309e6', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        submitBtn.textContent      = '✓ ¡Mensaje enviado!';
+        submitBtn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
         form.reset();
-      }, 4000);
+        setTimeout(() => {
+          submitBtn.textContent      = 'Enviar mensaje ✉️';
+          submitBtn.disabled         = false;
+          submitBtn.style.background = '';
+        }, 4000);
+      } catch {
+        submitBtn.textContent      = '✗ Error al enviar — intenta de nuevo';
+        submitBtn.style.background = 'linear-gradient(135deg, #EF4444, #DC2626)';
+        submitBtn.disabled         = false;
+        setTimeout(() => {
+          submitBtn.textContent      = 'Enviar mensaje ✉️';
+          submitBtn.style.background = '';
+        }, 4000);
+      }
     });
   }
 
