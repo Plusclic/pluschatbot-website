@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta al equipo de PlusChatbot. Estamos en Colombia y atendemos toda LATAM. Respuesta en menos de 24 horas. También disponibles por WhatsApp.">
+  <title>Contacto — PlusChatbot | Atención en español para Colombia & LATAM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{'dark-base':'#0D0520','dark-2':'#160A35'},fontFamily:{sans:['Inter','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark-base text-slate-200">
+
+<!-- NAV -->
+<nav id="navbar" class="fixed top-0 w-full z-50 py-3 transition-all duration-300" style="background:rgba(13,5,32,.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-14">
+      <a href="index.html" class="flex items-center gap-2.5 group flex-shrink-0">
+        <div class="w-9 h-9 rounded-xl flex items-center justify-center text-white font-black text-sm transition-transform group-hover:scale-105" style="background:linear-gradient(135deg,#7C3AED,#06B6D4);">P+</div>
+        <span class="text-white font-bold text-xl tracking-tight">Plus<span class="gradient-text">Chatbot</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="index.html" class="text-slate-400 text-sm hover:text-white transition-colors">Inicio</a>
+        <a href="caracteristicas.html" class="text-slate-400 text-sm hover:text-white transition-colors">Características</a>
+        <a href="precios.html" class="text-slate-400 text-sm hover:text-white transition-colors">Precios</a>
+        <a href="contacto.html" class="text-white text-sm font-medium">Contacto</a>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#" class="text-slate-300 hover:text-white text-sm font-medium transition-colors">Iniciar sesión</a>
+        <a href="precios.html" class="btn-primary text-sm px-5 py-2.5">Empezar gratis →</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white" style="background:rgba(255,255,255,.07);">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 mt-3 pt-4 pb-3">
+      <div class="flex flex-col gap-1">
+        <a href="index.html" class="text-slate-300 py-2.5 px-3 rounded-lg text-sm hover:bg-white/5">Inicio</a>
+        <a href="caracteristicas.html" class="text-slate-300 py-2.5 px-3 rounded-lg text-sm hover:bg-white/5">Características</a>
+        <a href="precios.html" class="text-slate-300 py-2.5 px-3 rounded-lg text-sm hover:bg-white/5">Precios</a>
+        <a href="contacto.html" class="text-white font-medium py-2.5 px-3 rounded-lg text-sm" style="background:rgba(139,92,246,.12);">Contacto</a>
+        <div class="pt-3 flex flex-col gap-2">
+          <a href="#" class="text-center text-slate-300 py-2.5 px-3 rounded-lg border border-white/10 text-sm">Iniciar sesión</a>
+          <a href="precios.html" class="btn-primary text-sm py-3">Empezar gratis →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative pt-32 pb-16 overflow-hidden" style="background:radial-gradient(ellipse at 50% -20%,#2D1B69 0%,#0D0520 60%);">
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute top-1/3 right-1/3 w-80 h-80 rounded-full opacity-[.07] blur-3xl" style="background:#06B6D4;"></div>
+    <div class="absolute inset-0 opacity-[.025]" style="background-image:linear-gradient(rgba(139,92,246,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.6) 1px,transparent 1px);background-size:44px 44px;"></div>
+  </div>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <div class="section-tag inline-flex mb-7 reveal">Estamos para ayudarte</div>
+    <h1 class="text-4xl sm:text-6xl font-black text-white mb-5 reveal">Hablemos<br><span class="gradient-text">en español</span></h1>
+    <p class="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto reveal">¿Tienes dudas, quieres una demo o necesitas ayuda con tu cuenta? Nuestro equipo está listo para atenderte. Respondemos en menos de 24 horas.</p>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-5 gap-12">
+
+      <!-- FORM -->
+      <div class="lg:col-span-3">
+        <div class="glass-card p-8 sm:p-10 reveal" style="border-color:rgba(139,92,246,.2);">
+          <h2 class="text-white font-bold text-2xl mb-2">Envíanos un mensaje</h2>
+          <p class="text-slate-400 text-sm mb-8">Completa el formulario y te contactamos en menos de 24 horas hábiles.</p>
+
+          <form id="contact-form" class="space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="form-label" for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Juan García" required>
+              </div>
+              <div>
+                <label class="form-label" for="empresa">Empresa / Negocio</label>
+                <input type="text" id="empresa" name="empresa" class="form-input" placeholder="Mi Empresa SAS">
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label class="form-label" for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="juan@empresa.com" required>
+              </div>
+              <div>
+                <label class="form-label" for="telefono">WhatsApp / Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="+57 300 000 0000">
+              </div>
+            </div>
+            <div>
+              <label class="form-label" for="motivo">¿En qué podemos ayudarte? *</label>
+              <select id="motivo" name="motivo" class="form-input" required>
+                <option value="" disabled selected style="background:#1E1050;color:#94A3B8;">Selecciona una opción</option>
+                <option value="demo" style="background:#1E1050;">Quiero una demo personalizada</option>
+                <option value="soporte" style="background:#1E1050;">Soporte técnico</option>
+                <option value="ventas" style="background:#1E1050;">Información sobre planes y precios</option>
+                <option value="agencia" style="background:#1E1050;">Plan para agencia o enterprise</option>
+                <option value="alianza" style="background:#1E1050;">Alianza o programa de afiliados</option>
+                <option value="otro" style="background:#1E1050;">Otro</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" for="mensaje">Cuéntanos más *</label>
+              <textarea id="mensaje" name="mensaje" rows="4" class="form-input resize-none" placeholder="Describe brevemente tu negocio y qué resultado esperas obtener con PlusChatbot..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full text-base py-4">
+              Enviar mensaje ✉️
+            </button>
+            <p class="text-slate-500 text-xs text-center">Al enviar aceptas nuestra <a href="#" class="text-purple-400 hover:text-purple-300 transition-colors">política de privacidad</a>. Sin spam, te lo prometemos.</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="lg:col-span-2 space-y-5">
+        <!-- WhatsApp CTA -->
+        <div class="glass-card p-7 reveal" style="border-color:rgba(37,211,102,.25);background:rgba(37,211,102,.05);">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style="background:rgba(37,211,102,.15);">💬</div>
+            <div>
+              <h3 class="text-white font-bold text-base mb-1">Respuesta inmediata por WhatsApp</h3>
+              <p class="text-slate-400 text-sm mb-4 leading-relaxed">¿Prefieres hablar directamente? Escríbenos por WhatsApp y te respondemos en minutos.</p>
+              <a href="https://wa.me/573003740652?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20PlusChatbot" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-white font-semibold text-sm transition-all hover:opacity-90" style="background:#25D366;">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Chatear por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="glass-card p-7 reveal" style="transition-delay:.07s;">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style="background:rgba(139,92,246,.14);">📧</div>
+            <div>
+              <h3 class="text-white font-bold text-base mb-1">Correo electrónico</h3>
+              <p class="text-slate-400 text-sm mb-2">Para temas de soporte y facturación:</p>
+              <a href="mailto:hola@pluschatbot.com" class="text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium">hola@pluschatbot.com</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="glass-card p-7 reveal" style="transition-delay:.14s;">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style="background:rgba(6,182,212,.14);">🕐</div>
+            <div>
+              <h3 class="text-white font-bold text-base mb-2">Horarios de atención</h3>
+              <div class="space-y-1.5 text-sm">
+                <div class="flex justify-between"><span class="text-slate-400">Lunes — Viernes</span><span class="text-slate-200">8:00 AM — 6:00 PM</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">Sábado</span><span class="text-slate-200">9:00 AM — 1:00 PM</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">Domingo</span><span class="text-slate-500">Cerrado</span></div>
+              </div>
+              <div class="mt-3 flex items-center gap-2 text-xs text-slate-400">
+                <svg class="w-3 h-3 text-green-400" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4"/></svg>
+                Zona horaria: Colombia (UTC-5)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="glass-card p-7 reveal" style="transition-delay:.21s;">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style="background:rgba(249,115,22,.14);">📍</div>
+            <div>
+              <h3 class="text-white font-bold text-base mb-1">Dónde estamos</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Bogotá, Colombia 🇨🇴<br>Atendemos toda América Latina.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO CTA -->
+<section class="py-24" style="background:rgba(22,10,53,.4);">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="section-tag inline-flex mb-6 reveal">Demo gratuita</div>
+    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-5 reveal">¿Prefieres verlo en acción?</h2>
+    <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-10 reveal">Agenda una demo de 30 minutos con uno de nuestros asesores. Te mostramos cómo PlusChatbot puede transformar las ventas de tu negocio específico.</p>
+    <div class="grid sm:grid-cols-3 gap-5 max-w-3xl mx-auto mb-10">
+      <div class="glass-card p-6 text-center reveal">
+        <div class="text-3xl mb-3">🎯</div>
+        <h3 class="text-white font-semibold text-sm mb-2">Demo personalizada</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">Adaptada a tu tipo de negocio e industria</p>
+      </div>
+      <div class="glass-card p-6 text-center reveal" style="transition-delay:.05s;">
+        <div class="text-3xl mb-3">⏱️</div>
+        <h3 class="text-white font-semibold text-sm mb-2">Solo 30 minutos</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">Respetamos tu tiempo. Va al grano.</p>
+      </div>
+      <div class="glass-card p-6 text-center reveal" style="transition-delay:.1s;">
+        <div class="text-3xl mb-3">🆓</div>
+        <h3 class="text-white font-semibold text-sm mb-2">Totalmente gratis</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">Sin compromisos ni presión de venta</p>
+      </div>
+    </div>
+    <a href="https://wa.me/573003740652?text=Hola%2C%20quiero%20agendar%20una%20demo%20de%20PlusChatbot" target="_blank" rel="noopener" class="btn-primary text-base px-10 py-4 reveal">
+      📅 Agendar mi demo gratis
+    </a>
+  </div>
+</section>
+
+<!-- FAQ CONTACT -->
+<section class="py-24">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4 reveal">Antes de contactarnos</h2>
+      <p class="text-slate-400 reveal">Quizá tu pregunta ya tiene respuesta aquí.</p>
+    </div>
+    <div>
+      <div class="faq-item"><button class="faq-question">¿Cuánto tarda en configurarse PlusChatbot?<span class="faq-icon">+</span></button><div class="faq-answer">La configuración básica toma menos de 10 minutos. Para flujos más avanzados, entre 30 y 60 minutos. Tenemos tutoriales en video paso a paso y nuestro equipo puede ayudarte en una sesión de onboarding incluida en el plan Agencia.</div></div>
+      <div class="faq-item"><button class="faq-question">¿Tienen soporte técnico en Colombia?<span class="faq-icon">+</span></button><div class="faq-answer">Sí. Todo nuestro equipo de soporte es de habla hispana y conoce el contexto de los negocios en Colombia y LATAM. Atendemos por chat en la plataforma, WhatsApp y correo electrónico.</div></div>
+      <div class="faq-item"><button class="faq-question">¿Puedo probar PlusChatbot antes de pagar?<span class="faq-icon">+</span></button><div class="faq-answer">Por supuesto. Ofrecemos 14 días de prueba gratuita completa sin tarjeta de crédito. Accedes a todas las funciones del plan Pro para que puedas evaluar si es la herramienta correcta para tu negocio.</div></div>
+      <div class="faq-item"><button class="faq-question">¿Qué tipos de negocios usan PlusChatbot?<span class="faq-icon">+</span></button><div class="faq-answer">Negocios de e-commerce, tiendas de moda, restaurantes, coaches y consultores, salones de belleza, agencias de viajes, bienes raíces, educación online, clínicas de salud, y muchos más. Si tienes presencia en Instagram o WhatsApp y recibes consultas por mensaje, PlusChatbot es para ti.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-14 border-t border-white/5" style="background:rgba(7,2,15,.85);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
+      <div class="col-span-2">
+        <a href="index.html" class="flex items-center gap-2.5 mb-4"><div class="w-9 h-9 rounded-xl flex items-center justify-center text-white font-black text-sm" style="background:linear-gradient(135deg,#7C3AED,#06B6D4);">P+</div><span class="text-white font-bold text-xl">PlusChatbot</span></a>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5 max-w-xs">La plataforma de automatización de DMs con mayor crecimiento en Colombia y LATAM. Automatiza. Convierte. Crece.</p>
+      </div>
+      <div><h4 class="text-white font-semibold text-sm mb-4">Producto</h4><ul class="space-y-3 text-sm text-slate-400"><li><a href="caracteristicas.html" class="hover:text-white transition-colors">Características</a></li><li><a href="precios.html" class="hover:text-white transition-colors">Precios</a></li><li><a href="#" class="hover:text-white transition-colors">Integraciones</a></li><li><a href="#" class="hover:text-white transition-colors">Novedades</a></li></ul></div>
+      <div><h4 class="text-white font-semibold text-sm mb-4">Recursos</h4><ul class="space-y-3 text-sm text-slate-400"><li><a href="#" class="hover:text-white transition-colors">Blog</a></li><li><a href="#" class="hover:text-white transition-colors">Tutoriales</a></li><li><a href="#" class="hover:text-white transition-colors">Centro de ayuda</a></li><li><a href="#" class="hover:text-white transition-colors">Casos de éxito</a></li></ul></div>
+      <div><h4 class="text-white font-semibold text-sm mb-4">Empresa</h4><ul class="space-y-3 text-sm text-slate-400"><li><a href="contacto.html" class="hover:text-white transition-colors">Contacto</a></li><li><a href="#" class="hover:text-white transition-colors">Términos de uso</a></li><li><a href="#" class="hover:text-white transition-colors">Privacidad</a></li><li><a href="#" class="hover:text-white transition-colors">Afiliados</a></li></ul></div>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-white/5 gap-4">
+      <p class="text-slate-500 text-sm">© 2025 PlusChatbot. Todos los derechos reservados.</p>
+      <span class="text-slate-500 text-xs">🇨🇴 Hecho con ♥ para LATAM</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/573003740652?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20PlusChatbot" target="_blank" rel="noopener" class="whatsapp-float" title="Escríbenos por WhatsApp">
+  <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

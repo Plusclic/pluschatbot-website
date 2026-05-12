@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Planes y precios de PlusChatbot. Starter desde $29/mes, Pro $79/mes, Agencia $199/mes. Prueba gratis 14 días sin tarjeta de crédito. El chatbot de Instagram y WhatsApp más asequible para Colombia.">
+  <title>Precios — PlusChatbot | Planes para Colombia & LATAM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{'dark-base':'#0D0520','dark-2':'#160A35'},fontFamily:{sans:['Inter','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark-base text-slate-200">
+
+<!-- NAV -->
+<nav id="navbar" class="fixed top-0 w-full z-50 py-3 transition-all duration-300" style="background:rgba(13,5,32,.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-14">
+      <a href="index.html" class="flex items-center gap-2.5 group flex-shrink-0">
+        <div class="w-9 h-9 rounded-xl flex items-center justify-center text-white font-black text-sm transition-transform group-hover:scale-105" style="background:linear-gradient(135deg,#7C3AED,#06B6D4);">P+</div>
+        <span class="text-white font-bold text-xl tracking-tight">Plus<span class="gradient-text">Chatbot</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="index.html" class="text-slate-400 text-sm hover:text-white transition-colors">Inicio</a>
+        <a href="caracteristicas.html" class="text-slate-400 text-sm hover:text-white transition-colors">Características</a>
+        <a href="precios.html" class="text-white text-sm font-medium">Precios</a>
+        <a href="contacto.html" class="text-slate-400 text-sm hover:text-white transition-colors">Contacto</a>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#" class="text-slate-300 hover:text-white text-sm font-medium transition-colors">Iniciar sesión</a>
+        <a href="#plans" class="btn-primary text-sm px-5 py-2.5">Ver planes →</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white" style="background:rgba(255,255,255,.07);">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 mt-3 pt-4 pb-3">
+      <div class="flex flex-col gap-1">
+        <a href="index.html" class="text-slate-300 py-2.5 px-3 rounded-lg text-sm hover:bg-white/5">Inicio</a>
+        <a href="caracteristicas.html" class="text-slate-300 py-2.5 px-3 rounded-lg text-sm hover:bg-white/5">Características</a>
+        <a href="precios.html" class="text-white font-medium py-2.5 px-3 rounded-lg text-sm" style="background:rgba(139,92,246,.12);">Precios</a>
+        <a href="contacto.html" class="text-slate-300 py-2.5 px-3 rounded-lg text-sm hover:bg-white/5">Contacto</a>
+        <div class="pt-3 flex flex-col gap-2">
+          <a href="#" class="text-center text-slate-300 py-2.5 px-3 rounded-lg border border-white/10 text-sm">Iniciar sesión</a>
+          <a href="#plans" class="btn-primary text-sm py-3">Ver planes →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative pt-32 pb-16 overflow-hidden" style="background:radial-gradient(ellipse at 50% -20%,#2D1B69 0%,#0D0520 60%);">
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute top-1/3 left-1/4 w-80 h-80 rounded-full opacity-[.07] blur-3xl" style="background:#7C3AED;"></div>
+    <div class="absolute inset-0 opacity-[.025]" style="background-image:linear-gradient(rgba(139,92,246,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.6) 1px,transparent 1px);background-size:44px 44px;"></div>
+  </div>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <div class="section-tag inline-flex mb-7 reveal">Precios transparentes</div>
+    <h1 class="text-4xl sm:text-6xl font-black text-white mb-5 reveal">Planes para cada<br><span class="gradient-text">tipo de negocio</span></h1>
+    <p class="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto mb-8 reveal">Sin sorpresas, sin letra pequeña. Elige el plan que se adapte a tu negocio y empieza a generar ventas hoy mismo.</p>
+
+    <!-- Billing toggle -->
+    <div class="toggle-wrapper justify-center mb-2 reveal">
+      <span id="label-monthly" class="text-white text-sm font-medium">Mensual</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="pricing-toggle">
+        <span class="toggle-slider"></span>
+      </label>
+      <span id="label-annual" class="text-slate-400 text-sm font-medium">Anual</span>
+      <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(16,185,129,.15);color:#6EE7B7;">Ahorra 20%</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING CARDS -->
+<section id="plans" class="py-16 pb-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-7 max-w-5xl mx-auto">
+
+      <!-- STARTER -->
+      <div class="pricing-card reveal flex flex-col">
+        <div>
+          <div class="text-slate-400 text-xs font-semibold uppercase tracking-widest mb-4">Starter</div>
+          <!-- Monthly price -->
+          <div class="price-monthly mb-1">
+            <div class="flex items-end gap-1"><span class="text-5xl font-black text-white">$29</span><span class="text-slate-400 mb-2 text-sm">/mes</span></div>
+          </div>
+          <!-- Annual price -->
+          <div class="price-annual hidden mb-1">
+            <div class="flex items-end gap-1"><span class="text-5xl font-black text-white">$23</span><span class="text-slate-400 mb-2 text-sm">/mes</span></div>
+            <div class="text-slate-400 text-xs mb-1">Facturado $276/año</div>
+          </div>
+          <p class="text-slate-400 text-sm mb-7 leading-relaxed">Ideal para emprendedores y negocios que arrancan su presencia digital.</p>
+          <ul class="space-y-3 mb-8 text-sm text-slate-300">
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>1 cuenta de Instagram o WhatsApp</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>500 contactos</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Respuestas automáticas a DMs</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Captura de leads de comentarios</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>3 flujos de automatización</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Soporte por chat en español</li>
+            <li class="flex items-start gap-2.5 opacity-40"><svg class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 20 20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>Broadcast masivo</li>
+            <li class="flex items-start gap-2.5 opacity-40"><svg class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 20 20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>CRM avanzado</li>
+          </ul>
+        </div>
+        <div class="mt-auto">
+          <a href="#" class="btn-secondary w-full text-sm py-3.5 mb-3">Empezar gratis — 14 días</a>
+          <p class="text-slate-500 text-xs text-center">Sin tarjeta de crédito requerida</p>
+        </div>
+      </div>
+
+      <!-- PRO (FEATURED) -->
+      <div class="pricing-card featured reveal flex flex-col" style="transition-delay:.07s;">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full text-xs font-bold text-white whitespace-nowrap" style="background:linear-gradient(135deg,#7C3AED,#06B6D4);">⭐ MÁS POPULAR</div>
+        <div>
+          <div class="text-purple-300 text-xs font-semibold uppercase tracking-widest mb-4">Pro</div>
+          <div class="price-monthly mb-1">
+            <div class="flex items-end gap-1"><span class="text-5xl font-black text-white">$79</span><span class="text-slate-400 mb-2 text-sm">/mes</span></div>
+          </div>
+          <div class="price-annual hidden mb-1">
+            <div class="flex items-end gap-1"><span class="text-5xl font-black text-white">$63</span><span class="text-slate-400 mb-2 text-sm">/mes</span></div>
+            <div class="text-slate-400 text-xs mb-1">Facturado $756/año</div>
+          </div>
+          <p class="text-slate-400 text-sm mb-7 leading-relaxed">Para negocios en crecimiento que quieren escalar sus ventas por DMs.</p>
+          <ul class="space-y-3 mb-8 text-sm text-slate-300">
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>3 cuentas de Instagram / WhatsApp</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>2,500 contactos</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Todo lo del plan Starter</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Flujos ilimitados de automatización</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Campañas de broadcast masivo</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>CRM integrado completo</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Integraciones (Zapier, Sheets, etc.)</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Soporte prioritario en español</li>
+          </ul>
+        </div>
+        <div class="mt-auto">
+          <a href="#" class="btn-primary w-full text-sm py-3.5 mb-3 pulse-glow">Empezar gratis — 14 días</a>
+          <p class="text-slate-500 text-xs text-center">Sin tarjeta de crédito requerida</p>
+        </div>
+      </div>
+
+      <!-- AGENCY -->
+      <div class="pricing-card reveal flex flex-col" style="transition-delay:.14s;">
+        <div>
+          <div class="text-slate-400 text-xs font-semibold uppercase tracking-widest mb-4">Agencia</div>
+          <div class="price-monthly mb-1">
+            <div class="flex items-end gap-1"><span class="text-5xl font-black text-white">$199</span><span class="text-slate-400 mb-2 text-sm">/mes</span></div>
+          </div>
+          <div class="price-annual hidden mb-1">
+            <div class="flex items-end gap-1"><span class="text-5xl font-black text-white">$159</span><span class="text-slate-400 mb-2 text-sm">/mes</span></div>
+            <div class="text-slate-400 text-xs mb-1">Facturado $1,908/año</div>
+          </div>
+          <p class="text-slate-400 text-sm mb-7 leading-relaxed">Para agencias y freelancers que gestionan múltiples clientes con resultados.</p>
+          <ul class="space-y-3 mb-8 text-sm text-slate-300">
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>10 cuentas de Instagram / WhatsApp</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Contactos ilimitados</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Todo lo del plan Pro incluido</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Panel de acceso por cliente</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Reportes descargables por cliente</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Soporte dedicado por WhatsApp</li>
+            <li class="flex items-start gap-2.5"><svg class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Onboarding personalizado 1:1</li>
+          </ul>
+        </div>
+        <div class="mt-auto">
+          <a href="contacto.html" class="btn-secondary w-full text-sm py-3.5 mb-3">Contactar al equipo de ventas</a>
+          <p class="text-slate-500 text-xs text-center">También disponible personalización enterprise</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust strip -->
+    <div class="mt-12 text-center reveal">
+      <div class="flex flex-wrap items-center justify-center gap-6 text-slate-500 text-sm">
+        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Prueba 14 días gratis</span>
+        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Sin tarjeta de crédito</span>
+        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Cancela en cualquier momento</span>
+        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Soporte en español incluido</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE COMPARISON TABLE -->
+<section class="py-24" style="background:rgba(22,10,53,.4);">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4 reveal">Comparación detallada de planes</h2>
+    </div>
+    <div class="glass-card overflow-x-auto reveal" style="border-color:rgba(139,92,246,.18);">
+      <table class="compare-table w-full min-w-[600px]">
+        <thead>
+          <tr style="background:rgba(22,10,53,.7);">
+            <th class="text-left">Característica</th>
+            <th>Starter<br><span class="font-normal normal-case text-slate-400 text-xs tracking-normal">$29/mes</span></th>
+            <th style="color:#A78BFA;">Pro<br><span class="font-normal normal-case text-slate-400 text-xs tracking-normal">$79/mes</span></th>
+            <th>Agencia<br><span class="font-normal normal-case text-slate-400 text-xs tracking-normal">$199/mes</span></th>
+          </tr>
+        </thead>
+        <tbody class="text-sm">
+          <tr class="font-medium" style="background:rgba(139,92,246,.05);">
+            <td class="text-purple-300 font-semibold" colspan="4" style="padding:10px 20px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;">Cuentas y contactos</td>
+          </tr>
+          <tr><td class="text-slate-300">Cuentas conectadas</td><td class="text-slate-300">1</td><td class="text-slate-300">3</td><td class="text-slate-300">10</td></tr>
+          <tr style="background:rgba(255,255,255,.02);"><td class="text-slate-300">Contactos</td><td class="text-slate-300">500</td><td class="text-slate-300">2,500</td><td class="text-green-400 font-medium">Ilimitados</td></tr>
+          <tr class="font-medium" style="background:rgba(139,92,246,.05);">
+            <td class="text-purple-300 font-semibold" colspan="4" style="padding:10px 20px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;">Automatización</td>
+          </tr>
+          <tr><td class="text-slate-300">Respuestas automáticas a DMs</td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td></tr>
+          <tr style="background:rgba(255,255,255,.02);"><td class="text-slate-300">Captura leads de comentarios</td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td></tr>
+          <tr><td class="text-slate-300">Triggers por palabra clave</td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td></tr>
+          <tr style="background:rgba(255,255,255,.02);"><td class="text-slate-300">Flujos de automatización</td><td class="text-slate-300">3</td><td class="text-green-400">Ilimitados</td><td class="text-green-400">Ilimitados</td></tr>
+          <tr><td class="text-slate-300">Broadcast masivo</td><td><svg class="w-5 h-5 text-red-400 mx-auto" fill="none" viewBox="0 0 20 20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td></tr>
+          <tr style="background:rgba(255,255,255,.02);"><td class="text-slate-300">Respuesta automática a historias</td><td><svg class="w-5 h-5 text-red-400 mx-auto" fill="none" viewBox="0 0 20 20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td></tr>
+          <tr class="font-medium" style="background:rgba(139,92,246,.05);">
+            <td class="text-purple-300 font-semibold" colspan="4" style="padding:10px 20px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;">CRM e integraciones</td>
+          </tr>
+          <tr><td class="text-slate-300">CRM de conversaciones</td><td class="text-slate-300">Básico</td><td class="text-green-400">Completo</td><td class="text-green-400">Completo</td></tr>
+          <tr style="background:rgba(255,255,255,.02);"><td class="text-slate-300">Integraciones (Zapier, etc.)</td><td><svg class="w-5 h-5 text-red-400 mx-auto" fill="none" viewBox="0 0 20 20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td></tr>
+          <tr><td class="text-slate-300">Panel de acceso por cliente</td><td><svg class="w-5 h-5 text-red-400 mx-auto" fill="none" viewBox="0 0 20 20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></td><td><svg class="w-5 h-5 text-red-400 mx-auto" fill="none" viewBox="0 0 20 20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></td><td><svg class="w-5 h-5 text-green-400 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td></tr>
+          <tr style="background:rgba(255,255,255,.02);"><td class="text-slate-300">Soporte</td><td class="text-slate-300">Chat</td><td class="text-slate-300">Prioritario</td><td class="text-green-400">Dedicado WhatsApp</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-24">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <div class="section-tag mb-4 reveal">Preguntas sobre precios</div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4 reveal">Resolvemos tus dudas</h2>
+    </div>
+    <div>
+      <div class="faq-item"><button class="faq-question">¿Los precios están en dólares o pesos colombianos?<span class="faq-icon">+</span></button><div class="faq-answer">Los precios están en USD. El cobro se realiza en dólares americanos. Dependiendo de tu banco, se convertirá al tipo de cambio del día del pago.</div></div>
+      <div class="faq-item"><button class="faq-question">¿Qué pasa cuando se acaba el período de prueba gratis?<span class="faq-icon">+</span></button><div class="faq-answer">Al finalizar los 14 días de prueba gratuita, se te pedirá que elijas un plan y agregues un método de pago para continuar. Si no lo haces, tu cuenta quedará en pausa hasta que selecciones un plan.</div></div>
+      <div class="faq-item"><button class="faq-question">¿Puedo cambiar de plan en cualquier momento?<span class="faq-icon">+</span></button><div class="faq-answer">Sí, puedes subir o bajar de plan cuando quieras desde tu panel de control. Si subes de plan, se calcula el prorrateo del período restante. Si bajas, el cambio aplica al siguiente ciclo de facturación.</div></div>
+      <div class="faq-item"><button class="faq-question">¿Qué pasa si necesito más de 10 cuentas?<span class="faq-icon">+</span></button><div class="faq-answer">Si tu agencia necesita más de 10 cuentas, contáctanos para un plan Enterprise personalizado. Tenemos opciones para agencias grandes con volumen alto de cuentas y contactos.</div></div>
+      <div class="faq-item"><button class="faq-question">¿Ofrecen descuentos para organizaciones sin fines de lucro o startups?<span class="faq-icon">+</span></button><div class="faq-answer">Sí, ofrecemos descuentos especiales para organizaciones sin fines de lucro y para startups en etapa temprana. Contáctanos con detalles de tu organización y lo evaluamos.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-14 border-t border-white/5" style="background:rgba(7,2,15,.85);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
+      <div class="col-span-2">
+        <a href="index.html" class="flex items-center gap-2.5 mb-4"><div class="w-9 h-9 rounded-xl flex items-center justify-center text-white font-black text-sm" style="background:linear-gradient(135deg,#7C3AED,#06B6D4);">P+</div><span class="text-white font-bold text-xl">PlusChatbot</span></a>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5 max-w-xs">La plataforma de automatización de DMs con mayor crecimiento en Colombia y LATAM. Automatiza. Convierte. Crece.</p>
+      </div>
+      <div><h4 class="text-white font-semibold text-sm mb-4">Producto</h4><ul class="space-y-3 text-sm text-slate-400"><li><a href="caracteristicas.html" class="hover:text-white transition-colors">Características</a></li><li><a href="precios.html" class="hover:text-white transition-colors">Precios</a></li><li><a href="#" class="hover:text-white transition-colors">Integraciones</a></li><li><a href="#" class="hover:text-white transition-colors">Novedades</a></li></ul></div>
+      <div><h4 class="text-white font-semibold text-sm mb-4">Recursos</h4><ul class="space-y-3 text-sm text-slate-400"><li><a href="#" class="hover:text-white transition-colors">Blog</a></li><li><a href="#" class="hover:text-white transition-colors">Tutoriales</a></li><li><a href="#" class="hover:text-white transition-colors">Centro de ayuda</a></li><li><a href="#" class="hover:text-white transition-colors">Casos de éxito</a></li></ul></div>
+      <div><h4 class="text-white font-semibold text-sm mb-4">Empresa</h4><ul class="space-y-3 text-sm text-slate-400"><li><a href="contacto.html" class="hover:text-white transition-colors">Contacto</a></li><li><a href="#" class="hover:text-white transition-colors">Términos de uso</a></li><li><a href="#" class="hover:text-white transition-colors">Privacidad</a></li><li><a href="#" class="hover:text-white transition-colors">Afiliados</a></li></ul></div>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-white/5 gap-4">
+      <p class="text-slate-500 text-sm">© 2025 PlusChatbot. Todos los derechos reservados.</p>
+      <span class="text-slate-500 text-xs">🇨🇴 Hecho con ♥ para LATAM</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/573003740652?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20los%20planes%20de%20PlusChatbot" target="_blank" rel="noopener" class="whatsapp-float" title="Escríbenos por WhatsApp">
+  <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

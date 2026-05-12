@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PlusChatbot — Automatiza tus DMs de Instagram y WhatsApp. Convierte seguidores en clientes 24/7 con inteligencia artificial. La herramienta de automatización de mensajes con mayor crecimiento en Colombia y LATAM.">
+  <meta name="keywords" content="chatbot Colombia, automatización DMs, Instagram bot, WhatsApp bot, ventas automáticas, leads LATAM">
+  <meta property="og:title" content="PlusChatbot — Automatiza DMs y vende más en piloto automático">
+  <meta property="og:description" content="Convierte seguidores en clientes 24/7 con automatización inteligente de DMs de Instagram y WhatsApp.">
+  <meta property="og:type" content="website">
+  <title>PlusChatbot — Automatiza DMs de Instagram y WhatsApp | Colombia & LATAM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dark-base': '#0D0520',
+            'dark-2': '#160A35',
+            'dark-3': '#1E1050',
+          },
+          fontFamily: { sans: ['Inter','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark-base text-slate-200">
+
+<!-- ═══════════════════════ NAV ═══════════════════════ -->
+<nav id="navbar" class="fixed top-0 w-full z-50 py-3 transition-all duration-300" style="background:rgba(13,5,32,.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-14">
+
+      <a href="index.html" class="flex items-center gap-2.5 group flex-shrink-0">
+        <div class="w-9 h-9 rounded-xl flex items-center justify-center text-white font-black text-sm transition-transform group-hover:scale-105" style="background:linear-gradient(135deg,#7C3AED,#06B6D4);">P+</div>
+        <span class="text-white font-bold text-xl tracking-tight">Plus<span class="gradient-text">Chatbot</span></span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-7">
+        <a href="index.html" class="text-white text-sm font-medium">Inicio</a>
+        <a href="caracteristicas.html" class="text-slate-400 text-sm hover:text-white transition-colors">Características</a>
+        <a href="precios.html" class="text-slate-400 text-sm hover:text-white transition-colors">Precios</a>
+        <a href="contacto.html" class="text-slate-400 text-sm hover:text-white transition-colors">Contacto</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#" class="text-slate-300 hover:text-white text-sm font-medium transition-colors">Iniciar sesión</a>
+        <a href="precios.html" class="btn-primary text-sm px-5 py-2.5">Empezar gratis →</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white" style="background:rgba(255,255,255,.07);">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 mt-3 pt-4 pb-3">
+      <div class="flex flex-col gap-1">
+        <a href="index.html" class="text-white font-medium py-2.5 px-3 rounded-lg text-sm" style="background:rgba(139,92,246,.12);">Inicio</a>
+        <a href="caracteristicas.html" class="text-slate-300 py-2.5 px-3 rounded-lg text-sm hover:bg-white/5 transition-colors">Características</a>
+        <a href="precios.html" class="text-slate-300 py-2.5 px-3 rounded-lg text-sm hover:bg-white/5 transition-colors">Precios</a>
+        <a href="contacto.html" class="text-slate-300 py-2.5 px-3 rounded-lg text-sm hover:bg-white/5 transition-colors">Contacto</a>
+        <div class="pt-3 flex flex-col gap-2">
+          <a href="#" class="text-center text-slate-300 py-2.5 px-3 rounded-lg border border-white/10 text-sm">Iniciar sesión</a>
+          <a href="precios.html" class="btn-primary text-sm py-3">Empezar gratis →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section class="relative min-h-screen flex items-center pt-16 overflow-hidden" style="background:radial-gradient(ellipse at 50% -15%,#2D1B69 0%,#0D0520 65%);">
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute top-1/3 left-1/5 w-96 h-96 rounded-full opacity-[.08] blur-3xl" style="background:#7C3AED;"></div>
+    <div class="absolute bottom-1/4 right-1/5 w-80 h-80 rounded-full opacity-[.07] blur-3xl" style="background:#06B6D4;"></div>
+    <div class="absolute inset-0 opacity-[.03]" style="background-image:linear-gradient(rgba(139,92,246,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.6) 1px,transparent 1px);background-size:44px 44px;"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10 w-full">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="section-tag inline-flex mb-7 reveal">🇨🇴&nbsp; Plataforma con mayor crecimiento en LATAM</div>
+
+      <h1 class="text-4xl sm:text-6xl lg:text-[5rem] font-black text-white leading-[1.05] mb-7 reveal" style="transition-delay:.05s;">
+        Automatiza tus DMs<br>
+        <span class="gradient-text">y vende más</span><br>
+        sin levantar un dedo
+      </h1>
+
+      <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed reveal" style="transition-delay:.1s;">
+        PlusChatbot responde cada DM al instante, captura leads de tus comentarios y convierte seguidores en clientes —
+        <strong class="text-slate-200">las 24 horas, los 7 días de la semana.</strong>
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 reveal" style="transition-delay:.15s;">
+        <a href="precios.html" class="btn-primary text-base px-9 py-4 pulse-glow">🚀 Empezar gratis — 14 días</a>
+        <a href="#como-funciona" class="btn-secondary text-base px-9 py-4">▶ Ver cómo funciona</a>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 text-slate-500 text-sm reveal" style="transition-delay:.2s;">
+        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Sin tarjeta de crédito</span>
+        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Cancela cuando quieras</span>
+        <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Soporte en español</span>
+      </div>
+    </div>
+
+    <!-- Dashboard mockup -->
+    <div class="mt-20 max-w-5xl mx-auto reveal" style="transition-delay:.25s;">
+      <div class="relative">
+        <div class="glass-card overflow-hidden float-animation" style="border-color:rgba(139,92,246,.3);">
+          <div class="flex items-center gap-2 px-4 py-3 border-b border-white/8" style="background:rgba(255,255,255,.025);">
+            <div class="w-3 h-3 rounded-full bg-red-500/60"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500/60"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500/60"></div>
+            <div class="flex-1 mx-3 h-5 rounded flex items-center px-3" style="background:rgba(255,255,255,.05);">
+              <span class="text-slate-500 text-xs">app.pluschatbot.com/dashboard</span>
+            </div>
+          </div>
+          <div class="p-5 sm:p-7" style="background:rgba(22,10,53,.85);min-height:320px;">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+              <div class="glass-card p-4">
+                <div class="text-slate-400 text-xs mb-1.5">DMs respondidos hoy</div>
+                <div class="text-2xl font-bold text-white">1,247</div>
+                <div class="text-green-400 text-xs mt-1">↑ 23% vs ayer</div>
+              </div>
+              <div class="glass-card p-4">
+                <div class="text-slate-400 text-xs mb-1.5">Leads capturados</div>
+                <div class="text-2xl font-bold text-white">89</div>
+                <div class="text-green-400 text-xs mt-1">↑ 12% vs ayer</div>
+              </div>
+              <div class="glass-card p-4">
+                <div class="text-slate-400 text-xs mb-1.5">Tasa de respuesta</div>
+                <div class="text-2xl font-bold gradient-text">100%</div>
+                <div class="text-slate-400 text-xs mt-1">Automático 24/7</div>
+              </div>
+              <div class="glass-card p-4">
+                <div class="text-slate-400 text-xs mb-1.5">Ventas generadas</div>
+                <div class="text-2xl font-bold text-white">$4.2M</div>
+                <div class="text-green-400 text-xs mt-1">↑ 34% este mes</div>
+              </div>
+            </div>
+            <div class="grid grid-cols-5 gap-3">
+              <div class="col-span-2 glass-card p-3">
+                <div class="text-slate-400 text-xs font-medium mb-3">Conversaciones activas</div>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2.5 p-2 rounded-lg" style="background:rgba(139,92,246,.15);">
+                    <div class="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold text-xs" style="background:linear-gradient(135deg,#EC4899,#F97316);">MC</div>
+                    <div class="min-w-0"><div class="text-white text-xs font-medium truncate">María Cardona</div><div class="text-slate-400 text-xs truncate">¿Tienen envío a Cali?</div></div>
+                  </div>
+                  <div class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-white/5 cursor-pointer">
+                    <div class="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold text-xs" style="background:linear-gradient(135deg,#3B82F6,#06B6D4);">CR</div>
+                    <div class="min-w-0"><div class="text-white text-xs font-medium truncate">Carlos Ruiz</div><div class="text-slate-400 text-xs truncate">¿Cuánto vale el curso?</div></div>
+                  </div>
+                  <div class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-white/5 cursor-pointer">
+                    <div class="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold text-xs" style="background:linear-gradient(135deg,#10B981,#06B6D4);">AL</div>
+                    <div class="min-w-0"><div class="text-white text-xs font-medium truncate">Ana López</div><div class="text-slate-400 text-xs truncate">Quiero más información</div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-3 glass-card p-3">
+                <div class="text-slate-400 text-xs font-medium mb-3">Chat con María Cardona</div>
+                <div class="space-y-2 mb-3">
+                  <div class="flex justify-end">
+                    <div class="text-xs py-2 px-3 rounded-xl rounded-tr-sm max-w-xs" style="background:rgba(139,92,246,.28);color:#E2E8F0;">¿Tienen envío a Cali? 😊</div>
+                  </div>
+                  <div class="flex justify-start">
+                    <div class="text-xs py-2 px-3 rounded-xl rounded-tl-sm max-w-xs" style="background:rgba(255,255,255,.08);color:#E2E8F0;">
+                      ¡Hola María! 👋 ¡Claro que sí! Hacemos envíos a toda Colombia. ¿Te comparto nuestro catálogo? 📦
+                      <div class="text-slate-500 mt-1.5 text-xs">🤖 PlusChatbot · ahora mismo</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 w-2/3 h-10 blur-2xl opacity-25 rounded-full" style="background:linear-gradient(90deg,#7C3AED,#06B6D4);"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ STATS ═══════════════════════ -->
+<section class="py-14 border-y border-white/5" style="background:rgba(22,10,53,.55);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="reveal">
+        <div class="stat-number mb-1"><span data-target="5000" data-suffix="+">0+</span></div>
+        <div class="text-slate-400 text-sm">Negocios en LATAM</div>
+      </div>
+      <div class="reveal" style="transition-delay:.05s;">
+        <div class="stat-number mb-1"><span data-target="10" data-suffix="M+">0M+</span></div>
+        <div class="text-slate-400 text-sm">Mensajes automatizados</div>
+      </div>
+      <div class="reveal" style="transition-delay:.1s;">
+        <div class="stat-number mb-1">80%</div>
+        <div class="text-slate-400 text-sm">Menos tiempo en DMs</div>
+      </div>
+      <div class="reveal" style="transition-delay:.15s;">
+        <div class="stat-number mb-1">3×</div>
+        <div class="text-slate-400 text-sm">Más ventas en promedio</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PAIN POINTS ═══════════════════════ -->
+<section class="py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <div class="section-tag mb-4 reveal">El problema</div>
+      <h2 class="text-3xl sm:text-5xl font-bold text-white mb-5 reveal">¿Te suena familiar?</h2>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto reveal">Cada día, miles de negocios en Colombia pierden ventas por no responder mensajes a tiempo.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="glass-card p-8 reveal" style="border-color:rgba(239,68,68,.14);">
+        <div class="text-4xl mb-5">😫</div>
+        <h3 class="text-white font-bold text-lg mb-3">Mensajes sin responder</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Te despiertas con 50 DMs y no tienes tiempo para responderlos todos. Algunos llevan días esperando respuesta.</p>
+      </div>
+      <div class="glass-card p-8 reveal" style="transition-delay:.05s;border-color:rgba(239,68,68,.14);">
+        <div class="text-4xl mb-5">💸</div>
+        <h3 class="text-white font-bold text-lg mb-3">Ventas que se escapan</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">El cliente pregunta el precio, tú tardas en responder y él compra en la competencia. Dinero que se va sin remedio.</p>
+      </div>
+      <div class="glass-card p-8 reveal" style="transition-delay:.1s;border-color:rgba(239,68,68,.14);">
+        <div class="text-4xl mb-5">⏰</div>
+        <h3 class="text-white font-bold text-lg mb-3">Horas perdidas al día</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Respondes los mismos mensajes 30 veces al día: "¿cuánto vale?", "¿tienen envíos?", "¿cómo compro?". Es agotador.</p>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <p class="text-slate-500 text-sm mb-3">Con PlusChatbot esto se acabó</p>
+      <svg class="w-5 h-10 mx-auto" style="color:#7C3AED;" fill="none" viewBox="0 0 20 40" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 4v28m0 0l-6-6m6 6l6-6"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FEATURES ═══════════════════════ -->
+<section id="features" class="py-24" style="background:rgba(22,10,53,.4);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <div class="section-tag mb-4 reveal">Características</div>
+      <h2 class="text-3xl sm:text-5xl font-bold text-white mb-5 reveal">Todo lo que necesitas para<br><span class="gradient-text">vender en piloto automático</span></h2>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto reveal">PlusChatbot hace el trabajo pesado para que puedas enfocarte en lo que realmente importa: hacer crecer tu negocio.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="glass-card p-7 hover:border-purple-500/30 transition-all duration-300 reveal">
+        <div class="feature-icon mb-5" style="background:rgba(139,92,246,.14);">🤖</div>
+        <h3 class="text-white font-bold text-lg mb-2">Respuestas automáticas 24/7</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Nunca más dejes un DM sin responder. PlusChatbot responde instantáneamente, incluso a las 3 de la madrugada.</p>
+      </div>
+      <div class="glass-card p-7 hover:border-cyan-500/30 transition-all duration-300 reveal" style="transition-delay:.05s;">
+        <div class="feature-icon mb-5" style="background:rgba(6,182,212,.14);">💬</div>
+        <h3 class="text-white font-bold text-lg mb-2">Flujos de conversación inteligentes</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Crea secuencias personalizadas que guíen al cliente desde el primer mensaje hasta la compra, paso a paso.</p>
+      </div>
+      <div class="glass-card p-7 hover:border-green-500/30 transition-all duration-300 reveal" style="transition-delay:.1s;">
+        <div class="feature-icon mb-5" style="background:rgba(16,185,129,.14);">🎯</div>
+        <h3 class="text-white font-bold text-lg mb-2">Captura leads de comentarios</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Cuando alguien comenta en tu post, envíale automáticamente un DM personalizado y conviértelo en lead al instante.</p>
+      </div>
+      <div class="glass-card p-7 hover:border-orange-500/30 transition-all duration-300 reveal" style="transition-delay:.05s;">
+        <div class="feature-icon mb-5" style="background:rgba(249,115,22,.14);">📣</div>
+        <h3 class="text-white font-bold text-lg mb-2">Campañas de broadcast</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Envía mensajes masivos a toda tu base de contactos para promociones, lanzamientos o noticias. Impacto inmediato.</p>
+      </div>
+      <div class="glass-card p-7 hover:border-blue-500/30 transition-all duration-300 reveal" style="transition-delay:.1s;">
+        <div class="feature-icon mb-5" style="background:rgba(59,130,246,.14);">📊</div>
+        <h3 class="text-white font-bold text-lg mb-2">CRM integrado</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Gestiona todos tus leads y conversaciones en un solo lugar. Nunca pierdas de vista una oportunidad de venta.</p>
+      </div>
+      <div class="glass-card p-7 hover:border-pink-500/30 transition-all duration-300 reveal" style="transition-delay:.15s;">
+        <div class="feature-icon mb-5" style="background:rgba(236,72,153,.14);">📱</div>
+        <h3 class="text-white font-bold text-lg mb-2">Respuesta a historias</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Responde automáticamente cuando alguien menciona tu cuenta en sus historias. Engagement al instante, siempre.</p>
+      </div>
+    </div>
+    <div class="text-center mt-10 reveal">
+      <a href="caracteristicas.html" class="btn-secondary text-sm px-7 py-3">Ver todas las características →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ HOW IT WORKS ═══════════════════════ -->
+<section id="como-funciona" class="py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <div class="section-tag mb-4 reveal">¿Cómo funciona?</div>
+      <h2 class="text-3xl sm:text-5xl font-bold text-white mb-5 reveal">Listo en <span class="gradient-text">menos de 5 minutos</span></h2>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto reveal">Sin código. Sin conocimientos técnicos. Sin complicaciones.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center reveal">
+        <div class="w-24 h-24 rounded-2xl flex items-center justify-center text-4xl mx-auto mb-6 pulse-glow" style="background:rgba(139,92,246,.14);border:2px solid rgba(139,92,246,.28);">🔗</div>
+        <div class="text-purple-400 font-bold text-xs mb-2 uppercase tracking-widest">Paso 1</div>
+        <h3 class="text-white font-bold text-xl mb-3">Conecta tu cuenta</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Vincula tu Instagram o WhatsApp Business con un clic. El proceso toma menos de 2 minutos y es 100% seguro.</p>
+      </div>
+      <div class="text-center reveal" style="transition-delay:.08s;">
+        <div class="w-24 h-24 rounded-2xl flex items-center justify-center text-4xl mx-auto mb-6" style="background:rgba(6,182,212,.14);border:2px solid rgba(6,182,212,.28);">⚙️</div>
+        <div class="text-cyan-400 font-bold text-xs mb-2 uppercase tracking-widest">Paso 2</div>
+        <h3 class="text-white font-bold text-xl mb-3">Configura tus flujos</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Usa nuestras plantillas listas o diseña flujos personalizados con nuestro editor visual. Sin una línea de código.</p>
+      </div>
+      <div class="text-center reveal" style="transition-delay:.16s;">
+        <div class="w-24 h-24 rounded-2xl flex items-center justify-center text-4xl mx-auto mb-6" style="background:rgba(16,185,129,.14);border:2px solid rgba(16,185,129,.28);">🚀</div>
+        <div class="text-green-400 font-bold text-xs mb-2 uppercase tracking-widest">Paso 3</div>
+        <h3 class="text-white font-bold text-xl mb-3">Activa y observa</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Activa tu automatización y ve cómo los leads llegan solos. Tú solo revisas el dashboard y cierras ventas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TESTIMONIALS ═══════════════════════ -->
+<section class="py-24" style="background:rgba(22,10,53,.4);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <div class="section-tag mb-4 reveal">Testimonios</div>
+      <h2 class="text-3xl sm:text-5xl font-bold text-white mb-5 reveal">Lo que dicen nuestros clientes</h2>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto reveal">Negocios reales en Colombia y LATAM ya venden más con PlusChatbot.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="testimonial-card reveal">
+        <div class="flex gap-0.5 mb-4"><span class="text-yellow-400 text-lg">★★★★★</span></div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">"Pasé de responder 3 horas diarias de DMs a casi no tener que abrirlos. PlusChatbot lo hace todo. Mis ventas subieron un 40% el primer mes."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold text-xs" style="background:linear-gradient(135deg,#EC4899,#F97316);">LC</div>
+          <div><div class="text-white font-semibold text-sm">Laura Castillo</div><div class="text-slate-400 text-xs">Tienda de ropa, Bogotá 🇨🇴</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal" style="transition-delay:.07s;border-color:rgba(139,92,246,.25);">
+        <div class="flex gap-0.5 mb-4"><span class="text-yellow-400 text-lg">★★★★★</span></div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">"Lo mejor fue la captura de leads de comentarios. Publiqué un sorteo y PlusChatbot capturó 847 leads en 24 horas. Antes eso me habría tomado semanas."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold text-xs" style="background:linear-gradient(135deg,#3B82F6,#06B6D4);">AM</div>
+          <div><div class="text-white font-semibold text-sm">Andrés Martínez</div><div class="text-slate-400 text-xs">Coach de negocios, Medellín 🇨🇴</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal" style="transition-delay:.14s;">
+        <div class="flex gap-0.5 mb-4"><span class="text-yellow-400 text-lg">★★★★★</span></div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">"Manejo 8 cuentas de clientes con PlusChatbot y el plan de agencia es perfecto. Mis clientes están felices y yo gané tiempo y dinero."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold text-xs" style="background:linear-gradient(135deg,#10B981,#06B6D4);">SR</div>
+          <div><div class="text-white font-semibold text-sm">Sandra Reyes</div><div class="text-slate-400 text-xs">Agencia de marketing, Cali 🇨🇴</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PRICING PREVIEW ═══════════════════════ -->
+<section class="py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <div class="section-tag mb-4 reveal">Precios</div>
+      <h2 class="text-3xl sm:text-5xl font-bold text-white mb-5 reveal">Planes para cada <span class="gradient-text">tipo de negocio</span></h2>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto reveal">Desde emprendedores hasta agencias. Empieza gratis y escala cuando lo necesites.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="pricing-card reveal">
+        <div class="text-slate-400 text-xs font-semibold uppercase tracking-widest mb-3">Starter</div>
+        <div class="flex items-end gap-1 mb-1"><span class="text-4xl font-black text-white">$29</span><span class="text-slate-400 mb-1.5 text-sm">/mes</span></div>
+        <p class="text-slate-400 text-sm mb-7">Ideal para emprendedores y negocios que arrancan.</p>
+        <ul class="space-y-3 mb-8 text-sm text-slate-300">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>1 cuenta de Instagram / WhatsApp</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>500 contactos</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Flujos básicos de automatización</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Soporte por chat</li>
+        </ul>
+        <a href="precios.html" class="btn-secondary w-full text-sm py-3">Empezar gratis</a>
+      </div>
+
+      <div class="pricing-card featured reveal" style="transition-delay:.07s;">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold text-white" style="background:linear-gradient(135deg,#7C3AED,#06B6D4);">MÁS POPULAR</div>
+        <div class="text-purple-300 text-xs font-semibold uppercase tracking-widest mb-3">Pro</div>
+        <div class="flex items-end gap-1 mb-1"><span class="text-4xl font-black text-white">$79</span><span class="text-slate-400 mb-1.5 text-sm">/mes</span></div>
+        <p class="text-slate-400 text-sm mb-7">Para negocios listos para escalar sus ventas digitales.</p>
+        <ul class="space-y-3 mb-8 text-sm text-slate-300">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>3 cuentas conectadas</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>2,500 contactos</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Todas las características incluidas</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Soporte prioritario en español</li>
+        </ul>
+        <a href="precios.html" class="btn-primary w-full text-sm py-3">Empezar gratis</a>
+      </div>
+
+      <div class="pricing-card reveal" style="transition-delay:.14s;">
+        <div class="text-slate-400 text-xs font-semibold uppercase tracking-widest mb-3">Agencia</div>
+        <div class="flex items-end gap-1 mb-1"><span class="text-4xl font-black text-white">$199</span><span class="text-slate-400 mb-1.5 text-sm">/mes</span></div>
+        <p class="text-slate-400 text-sm mb-7">Para agencias que gestionan múltiples clientes.</p>
+        <ul class="space-y-3 mb-8 text-sm text-slate-300">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>10 cuentas conectadas</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Contactos ilimitados</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Panel de cliente incluido</li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Soporte dedicado por WhatsApp</li>
+        </ul>
+        <a href="precios.html" class="btn-secondary w-full text-sm py-3">Ver detalles</a>
+      </div>
+    </div>
+    <div class="text-center mt-8 reveal"><a href="precios.html" class="text-purple-400 hover:text-purple-300 text-sm transition-colors">Ver comparación completa de planes →</a></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FAQ ═══════════════════════ -->
+<section class="py-24" style="background:rgba(22,10,53,.4);">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <div class="section-tag mb-4 reveal">Preguntas frecuentes</div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4 reveal">¿Tienes dudas?</h2>
+    </div>
+    <div>
+      <div class="faq-item"><button class="faq-question">¿PlusChatbot viola los términos de Instagram o WhatsApp?<span class="faq-icon">+</span></button><div class="faq-answer">No. PlusChatbot usa las APIs oficiales de Instagram y WhatsApp Business, por lo que opera 100% dentro de sus términos de uso. Trabajamos como partner oficial de Meta.</div></div>
+      <div class="faq-item"><button class="faq-question">¿Necesito conocimientos técnicos para usarlo?<span class="faq-icon">+</span></button><div class="faq-answer">Para nada. PlusChatbot está diseñado para que cualquier persona lo use sin saber programar. Nuestro editor visual es intuitivo y tenemos plantillas listas para los casos más comunes.</div></div>
+      <div class="faq-item"><button class="faq-question">¿Cuánto tiempo tarda en verse resultados?<span class="faq-icon">+</span></button><div class="faq-answer">La mayoría de nuestros clientes ven resultados desde el primer día. Una vez que activas tu automatización, PlusChatbot empieza a responder DMs y capturar leads de inmediato.</div></div>
+      <div class="faq-item"><button class="faq-question">¿Puedo cancelar en cualquier momento?<span class="faq-icon">+</span></button><div class="faq-answer">Sí, puedes cancelar tu suscripción en cualquier momento sin penalizaciones. No hay contratos ni compromisos. Si cancelas, mantienes acceso hasta el final del período ya pagado.</div></div>
+      <div class="faq-item"><button class="faq-question">¿El soporte es en español?<span class="faq-icon">+</span></button><div class="faq-answer">Sí, todo nuestro soporte es en español. Tenemos chat en vivo, soporte por WhatsApp y tutoriales en video para que saques el máximo provecho de la plataforma.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FINAL CTA ═══════════════════════ -->
+<section class="py-24">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="glass-card p-12 sm:p-16 relative overflow-hidden reveal" style="background:linear-gradient(150deg,rgba(124,58,237,.14),rgba(6,182,212,.08));border-color:rgba(124,58,237,.3);">
+      <div class="absolute top-0 left-0 w-64 h-64 rounded-full opacity-10 blur-3xl -translate-x-1/2 -translate-y-1/2" style="background:#7C3AED;"></div>
+      <div class="absolute bottom-0 right-0 w-64 h-64 rounded-full opacity-10 blur-3xl translate-x-1/2 translate-y-1/2" style="background:#06B6D4;"></div>
+      <div class="relative z-10">
+        <div class="text-5xl mb-6">🚀</div>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mb-5">¿Listo para automatizar<br>y vender más?</h2>
+        <p class="text-slate-300 text-lg mb-8 max-w-xl mx-auto">Únete a más de 5,000 negocios en Colombia y LATAM que ya generan ventas en piloto automático.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="precios.html" class="btn-primary text-base px-10 py-4">🎯 Empezar 14 días gratis</a>
+          <a href="contacto.html" class="btn-secondary text-base px-10 py-4">Hablar con un asesor</a>
+        </div>
+        <p class="text-slate-500 text-sm mt-5">Sin tarjeta de crédito &nbsp;·&nbsp; Cancela cuando quieras &nbsp;·&nbsp; Soporte en español</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer class="py-14 border-t border-white/5" style="background:rgba(7,2,15,.85);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
+      <div class="col-span-2">
+        <a href="index.html" class="flex items-center gap-2.5 mb-4">
+          <div class="w-9 h-9 rounded-xl flex items-center justify-center text-white font-black text-sm" style="background:linear-gradient(135deg,#7C3AED,#06B6D4);">P+</div>
+          <span class="text-white font-bold text-xl">PlusChatbot</span>
+        </a>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5 max-w-xs">La plataforma de automatización de DMs con mayor crecimiento en Colombia y LATAM. Automatiza. Convierte. Crece.</p>
+        <div class="flex items-center gap-3">
+          <a href="#" class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-400 hover:text-white transition-all" style="background:rgba(255,255,255,.06);" title="Instagram">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-400 hover:text-green-400 transition-all" style="background:rgba(255,255,255,.06);" title="WhatsApp">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-400 hover:text-blue-400 transition-all" style="background:rgba(255,255,255,.06);" title="Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-4">Producto</h4>
+        <ul class="space-y-3 text-sm text-slate-400">
+          <li><a href="caracteristicas.html" class="hover:text-white transition-colors">Características</a></li>
+          <li><a href="precios.html" class="hover:text-white transition-colors">Precios</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Integraciones</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Novedades</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-4">Recursos</h4>
+        <ul class="space-y-3 text-sm text-slate-400">
+          <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Tutoriales en video</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Centro de ayuda</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Casos de éxito</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-4">Empresa</h4>
+        <ul class="space-y-3 text-sm text-slate-400">
+          <li><a href="contacto.html" class="hover:text-white transition-colors">Contacto</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Términos de uso</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Privacidad</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Programa de afiliados</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-white/5 gap-4">
+      <p class="text-slate-500 text-sm">© 2025 PlusChatbot. Todos los derechos reservados.</p>
+      <div class="flex items-center gap-5">
+        <span class="text-slate-500 text-xs flex items-center gap-1.5"><svg class="w-2.5 h-2.5 text-green-400" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4"/></svg>Todos los sistemas operando</span>
+        <span class="text-slate-500 text-xs">🇨🇴 Hecho con ♥ para LATAM</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<a href="https://wa.me/573003740652?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20PlusChatbot" target="_blank" rel="noopener" class="whatsapp-float" title="Escríbenos por WhatsApp">
+  <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
